@@ -1,0 +1,33 @@
+Task: Implementing Pagination, Sorting, and Searching for Communities
+Objective:
+Enhance the functionality of an existing .NET application by incorporating advanced data management features, including pagination, sorting, and searching, for the community's controller. This will necessitate modifications to the CommunityController’s GetCommunities endpoint.
+Functional Requirements:
+Pagination:
+Implement pagination to support retrieving communities in pages, with a configurable number of communities per page.
+Parameters: pageNumber (int), pageSize (int).
+Sorting:
+Enable sorting of Communities based on a specified key.
+Allow users to specify the sorting order (ascending or descending).
+Parameters: isAscending (bool?), sortKey (string?)
+Sort based on property selected: Options for sortKey: (createdAt, PostsCount,subscribersCount, id).
+By default if nulls provided sort in ascending order by id.
+Note:
+ postsCount is calculated by Count of Posts in Community,
+Likewise subscribersCount is Count of subscribers in the community.
+Searching:
+Allow filtering of communities by checking if a SearchKey is contained within Community.Name or Community.Description.
+Parameter: SearchKey (string?).
+If SearchKey is null, apply no filter.
+Starting Point:
+branch: group1/task1-FluentConfiguration
+https://github.com/ChaoticSurfer/Reddit/tree/master
+Submission Instructions:
+Upload/Push and send public Github Repository Link on your account.
+Evaluation Criteria:
+Functionality: Effective implementation of Pagination, Sorting, Searching
+Pushed to github with best practices.
+This task is designed to test your ability to extend an application's functionality in a real-world scenario. Focus on writing efficient and scalable code to manage data retrieval in a way that enhances the user experience. Good luck!
+
+
+Optional:
+Validate PageSize not more than 50, and handle appropriate validation errors.
